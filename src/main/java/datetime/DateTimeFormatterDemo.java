@@ -1,9 +1,6 @@
 package datetime;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.Month;
-import java.time.ZonedDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 
@@ -47,6 +44,12 @@ public class DateTimeFormatterDemo {
 
         String formattedTime1 = localDateTime.format(DateTimeFormatter.ISO_TIME);
         System.out.println(formattedTime1); //11:48:50
+
+        ZoneId zoneId = ZoneId.of("Asia/Calcutta");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
+        Instant instant = Instant.ofEpochMilli(1751138381L); // Note the 'L' for long literal
+        ZonedDateTime dateTimeIn = ZonedDateTime.ofInstant(instant, zoneId);
+        System.out.println(dateTimeIn.format(dateTimeFormatter));
 
     }
 }
