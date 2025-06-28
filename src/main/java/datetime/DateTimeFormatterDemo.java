@@ -1,0 +1,52 @@
+package datetime;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+
+public class DateTimeFormatterDemo {
+
+    public static void main(String[] args) {
+        //String to localDate
+        String date = "1995-11-25";
+        LocalDate stringToLocalDate = LocalDate.parse(date);
+        System.out.println(stringToLocalDate); //1995-11-25
+
+        date = "1995/11/25";
+        LocalDate stringToLocalDate1 = LocalDate.parse(date, DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+        System.out.println(stringToLocalDate1); //1995-11-25
+
+        String dateTimeString = "2025-06-28 11:48:50+05:30";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ssXXX");
+        ZonedDateTime zonedDateTime = ZonedDateTime.parse(dateTimeString, formatter);
+        System.out.println(zonedDateTime); //2025-06-28T11:48:50+05:30
+
+        //LocalDate To String
+        LocalDate localDate = LocalDate.of(1997, 7, 27);
+        String dateToString = localDate.format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+        System.out.println(dateToString); //1997/07/27
+
+        localDate = LocalDate.of(2024, 11, 2);
+        String nightMare = DateTimeFormatter.ofPattern("yyyy/MM/dd").format(localDate);
+        System.out.println(nightMare); //2024/11/02
+
+        LocalDateTime localDateTime = LocalDateTime.of(2025, Month.JUNE, 28, 11, 48, 50);
+        System.out.println(localDateTime); //2025-06-28T11:48:50
+
+        String formattedDate = localDateTime.format(DateTimeFormatter.ISO_DATE);
+        System.out.println(formattedDate); //2025-06-28
+
+        String formattedDate2 = localDateTime.format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+        System.out.println(formattedDate2); //2025/06/28
+
+        String formattedDate3 = localDateTime.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM));
+        System.out.println(formattedDate3); //28 Jun 2025
+
+        String formattedTime1 = localDateTime.format(DateTimeFormatter.ISO_TIME);
+        System.out.println(formattedTime1); //11:48:50
+
+    }
+}
