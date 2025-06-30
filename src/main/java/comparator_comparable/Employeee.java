@@ -2,7 +2,8 @@ package comparator_comparable;
 
 import java.util.List;
 
-public class Employeee implements Comparable<Employeee> {
+//public class Employeee implements Comparable<Employeee> {
+public class Employeee {
 
     private final int id;
     private final String name;
@@ -13,10 +14,10 @@ public class Employeee implements Comparable<Employeee> {
     private final double salary;
     private final List<String> techStack;
 
-    @Override
-    public int compareTo(Employeee o) {
-        return this.age - o.age;
-    }
+//    @Override
+//    public int compareTo(Employeee o) {
+//        return this.age - o.age;
+//    }
 
     public Employeee(int id, String name, int age, String gender, String department, int yearOfJoining, double salary, List<String> techStack) {
         this.id = id;

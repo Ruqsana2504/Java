@@ -1,9 +1,6 @@
 package comparator_comparable;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class ComparatorVsComparable {
 
@@ -22,7 +19,16 @@ public class ComparatorVsComparable {
         // To enable sorting on a specific field, implement the Comparable interface in your DTO class.
         // Override the compareTo method and define comparison logic based on the desired field.
         System.out.println(employees);
-        Collections.sort(employees);
+//        Collections.sort(employees);
+
+        Collections.sort(employees, new NameComparator());
+        System.out.println(employees);
+
+        Collections.sort(employees, new SalaryComparator());
+        System.out.println(employees);
+
+        //Using Java8
+        employees.sort(Comparator.comparing(Employeee::getYearOfJoining));
         System.out.println(employees);
 
     }
