@@ -1,4 +1,4 @@
-package comparator_comparable;
+package com.comparatorcomparable;
 
 import java.util.*;
 
@@ -33,7 +33,7 @@ public class ComparatorVsComparable {
 
     }
 
-    private static List<Employeee> getEmployees() {
+    public static List<Employeee> getEmployees() {
         Employeee e1 = new Employeee(1, "Antman", 39, "Male", "DX", 2011, 100000, Arrays.asList("Ruby", "Java", "C++"));
         Employeee e2 = new Employeee(2, "Sam", 24, "Male", "ENG", 2017, 76000, Arrays.asList(".Net", "JavaScript", "C++"));
         Employeee e3 = new Employeee(8, "carol", 30, "Female", "CIS", 2013, 85000, Arrays.asList("Java", "C#", "python"));

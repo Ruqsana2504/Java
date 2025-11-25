@@ -1,4 +1,4 @@
-package hashing;
+package com.hashing;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
