@@ -4,7 +4,7 @@ import java.util.*;
 
 public class ComparatorVsComparable {
 
-    public static void main(String[] args) {
+    static void main() {
 
         ArrayList<Integer> marks = new ArrayList<>();
         marks.add(21);
@@ -47,7 +47,8 @@ public class ComparatorVsComparable {
         Employeee e11 = new Employeee(11, "Wasp", 33, "Female", "DX", 2001, 80070, Arrays.asList("Ruby", "JavaScript", "C++"));
         Employeee e12 = new Employeee(12, "Thor", 34, "Male", "ENG", 2018, 56000, Arrays.asList(".Net", "Java", "C++"));
         Employeee e13 = new Employeee(13, "Thanos", 35, "Male", "CIS", 2019, 67000, Arrays.asList("JavaScript", "C#", "Java"));
+        Employeee e14 = new Employeee(14, "Antony", 29, "Male", "DX", 2021, 80070, Arrays.asList("Ruby", "Java", "C++"));
 
-        return Arrays.asList(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13);
+        return Arrays.asList(e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14);
     }
 }
