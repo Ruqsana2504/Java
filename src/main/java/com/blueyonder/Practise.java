@@ -5,7 +5,7 @@ import com.comparatorcomparable.Employeee;
 
 import java.util.*;
 
-public class practise {
+public class Practise {
 
     static void main() {
 
