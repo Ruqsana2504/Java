@@ -61,7 +61,7 @@ public class Jul10 {
         }
 
         private void reHashing() {
-            LinkedList<Node> oldBucket[] = buckets;
+            LinkedList<Node>[] oldBucket = buckets;
             buckets = new LinkedList[2 * N];
             for (int i = 0; i < 2 * N; i++) {
                 buckets[i] = new LinkedList<>();
@@ -121,7 +121,7 @@ public class Jul10 {
 
     }
 
-    public static void main(String[] args) {
+    static void main() {
         HashMap<String, Integer> map = new HashMap<>();
         map.put("India", 120);
         map.put("US", 30);

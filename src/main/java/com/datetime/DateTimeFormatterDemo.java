@@ -6,7 +6,7 @@ import java.time.format.FormatStyle;
 
 public class DateTimeFormatterDemo {
 
-    public static void main(String[] args) {
+    static void main() {
         //String to localDate
         String date = "1995-11-25";
         LocalDate stringToLocalDate = LocalDate.parse(date);

@@ -20,7 +20,7 @@ public class lc169_MajorityElement {
         }
     }
 
-    public static void main(String[] args) {
+    static void main() {
         int[] nums = {1, 3, 2, 3, 1, 3, 1, 4, 1, 5, 3};
         majorityElement(nums);
     }

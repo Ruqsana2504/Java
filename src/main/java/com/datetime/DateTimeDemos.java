@@ -4,7 +4,7 @@ import java.time.*;
 
 public class DateTimeDemos {
 
-    public static void main(String[] args) {
+    static void main() {
         LocalDate localDate = LocalDate.now();
         LocalDate customLocalDate = LocalDate.of(1995, 11, 25);
         System.out.println(customLocalDate); //1995-11-25
