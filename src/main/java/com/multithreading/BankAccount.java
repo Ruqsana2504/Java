@@ -9,7 +9,7 @@ public class BankAccount {
 
     private final Lock lock = new ReentrantLock();
 
-    public void withdraw(int amount) {//not using synchronised - using explicit locks
+    public void withdraw(int amount) {//not using synchronized - using explicit locks
         System.out.println(Thread.currentThread().getName() + " Attempting to withdraw " + amount + " from account with balance " + balance);
         try {
             if (lock.tryLock()) { //acquires lock if free and returns true else returns false
