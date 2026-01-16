@@ -1,15 +1,15 @@
 package com.blueyonder;
 
-import com.comparatorcomparable.ComparatorVsComparable;
 import com.comparatorcomparable.Employeee;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Practise {
 
     static void main() {
 
-        List<Employeee> employeesList = ComparatorVsComparable.getEmployees();
+        List<Employeee> employeesList = Employeee.getEmployees();
 
         //4th highest salary
         Employeee fourthHighestEmployee = employeesList.stream()
@@ -41,6 +41,13 @@ public class Practise {
         //since this has negative numbers we can't use two pointers
         int[] arr = {4, -3, 1, 2, -3, 4};
         System.out.println("4. Subarray with sum zero : " + hasZeroSumSubarray(arr));
+
+        Map<String, Double> secondarySorting = employeesList.stream()
+                .sorted(Comparator.comparing(Employeee::getSalary, Comparator.reverseOrder())
+                        .thenComparing(Employeee::getName))
+                .collect(Collectors.toMap(Employeee::getName, Employeee::getSalary, (oldValue, newValue) -> oldValue, LinkedHashMap::new));
+        System.out.println(secondarySorting);
+
     }
 
     private static String group012(String str) {

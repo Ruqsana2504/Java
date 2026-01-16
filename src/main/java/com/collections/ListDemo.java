@@ -38,7 +38,6 @@ public class ListDemo extends CollectionBase {
         list1.sort(Comparator.naturalOrder());
         list1.sort(Comparator.reverseOrder());
         list1.sort(Comparator.comparing(String::length));
-
         //TO ARRAY
         list1.toArray();
 
