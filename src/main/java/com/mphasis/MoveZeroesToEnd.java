@@ -1,4 +1,6 @@
-package com.mphasis.practise;
+package com.mphasis;
+
+import com.Util;
 
 import java.util.Arrays;
 
@@ -40,16 +42,11 @@ public class MoveZeroesToEnd {
         int j = 0;
         while (j < n) {
             if (arr[j] != 0) {
-                swap(i, j, arr);
+                Util.swap(arr, i, j);
                 i++;
             }
             j++;
         }
     }
 
-    public static void swap(int i, int j, int[] arr) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
 }

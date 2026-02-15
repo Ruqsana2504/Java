@@ -1,4 +1,4 @@
-package com.mphasis.practise;
+package com.mphasis;
 
 public class ThreadDemo {
 
