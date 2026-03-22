@@ -14,6 +14,6 @@ public class Infor {
         Infor infor = new Infor();
         infor.m1('a');
         infor.m1(10L);
-//        infor.m1(10.2);
+//        infor.m1(10.2); Compilation error
     }
 }
